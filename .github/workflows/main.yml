@@ -1,0 +1,10 @@
+name: CI Pipeline
+on: [push]
+jobs:
+  build:
+     runs-on: ubuntu-latest
+     step:
+         - name: Checkout
+           uses: actions/checkout@v4
+         - name: Run one-line scripts
+           run: echo "CI pipeline is running successfully"
