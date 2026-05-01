@@ -37,5 +37,21 @@ The workflow is defined in `.github/workflows` and triggered automatically on ev
 - Runs a one-line script - to confirm the pipeline is working:
   echo "Hello, the CI pipeline is running successfully!"
 - This flowchart helps us understand the workflow better:
-
 ![1777646000979](image/README/1777646000979.png)
+
+- The flowchart explains:
+**Developer** → Pushes code (git push)
+we commit and push changes to GitHub.
+
+**GitHub** → Detects push (Trigger)
+GitHub sees the new push and triggers the workflow defined in main.yml.
+
+**GitHub Actions** → Starts a Runner (VM)
+GitHub spins up a virtual machine (runner) to execute the jobs.
+
+**Runner** → Runs the Script (echo Hello)
+The runner executes the steps in the YAML file (in this case, just printing a message).
+
+**Status** → Success or Fail 
+If the script runs correctly, a green check is shown.
+
